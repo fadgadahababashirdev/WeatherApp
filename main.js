@@ -6,13 +6,15 @@ const wind = document.getElementById('wind')
 const tempara = document.getElementById('feels')
 const farenh=document.getElementById('farhenneit')
 const cloud = document.getElementById('cloud')
+const sectionTwo = document.getElementsByClassName('section-two')[0]
+const cityNa = document.getElementById('cit');
 
 
 
 
 const myFetchApi = async (data)=>{
     try {
-        const myApi = `https://api.weatherapi.com/v1/current.json?key=  c266a5bc38894bea8d994326231412&q=${data}`
+        const myApi = `https://api.weatherapi.com/v1/current.json?key=c266a5bc38894bea8d994326231412&q=${data}`
         const fetchTheApi = await fetch(myApi)
         if(!fetchTheApi.ok){
             throw new Error(`city ${data} not found`);
@@ -32,6 +34,8 @@ searchButton.addEventListener('click' , ()=>{
     }else{
          
         myFetchApi(input.value)
+        sectionTwo.style.visibility = 'visible'
+      
     }
    
 })
@@ -56,6 +60,12 @@ const DisplayData = (dat)=>{
    
    const clouds = dat.current?.cloud
    cloud.textContent = clouds
+
+   const cite = dat.location?.name
+   cityNa.textContent = cite
+    
+
+  
    
 
 }

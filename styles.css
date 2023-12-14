@@ -1,15 +1,22 @@
-body{
+*{
+    padding:0;
     margin:0;
+}
+
+body{
     padding: 0;
     box-sizing: border-box;
     background-image: url('images/weather \image.jpg');
-    background-position: fixed;
+    background-attachment: fixed;
     background-repeat:no-repeat;
     background-size: cover;
-    display:block;
+
+    display:flex;
+    justify-content: center;
     text-align: center;
-    width: 100%;
+    width: 100vw;
     height:100vh;
+    margin-top: 30px;
  
     
 }
@@ -17,8 +24,6 @@ body{
 .header{
     width: 97%;
     height:60px;
-    margin-left: 20px;
-    margin-right: 20px;
     background-color: #CEC7C7;
     border-radius:10px;
     
@@ -34,7 +39,6 @@ body{
     color: #1A8ADB;
     font-family: arial;
     padding-top: 15px;
-    margin-left:20px ;
 
 }
 
@@ -43,7 +47,7 @@ body{
     font-weight:bold;
     font-family: arial;
     font-size: 23px;
-    margin-top:50px;
+    margin-top: 30px;
 
 
 }
@@ -53,16 +57,13 @@ body{
     height:50px;
     background-color: #CEC7C7;
     border-radius:10px 10px 0 0;
-    margin-left:423px;
-    margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 }
 .searchIcon img{
     width:100%px;
     height:50px;
-    margin-top: 0px;
-    margin-left: 0px;
 }
 
 input[type="text"]{
@@ -87,13 +88,12 @@ button{
     width:500px;
     height:400px;
     background-color: aliceblue;
-    margin-left: 430px;
     text-align:start;
-    margin-top: 40px;
     padding-bottom:150px;
     padding:30px;
     border-radius: 20px;
-    /* visibility: ; */
+    visibility:hidden;
+    margin-top: 90px;
 }
 
 .center{
@@ -127,7 +127,6 @@ button{
 .second{
     display:flex;
 
-    margin-left:40px;
 }
 .second img{
     width:45px;
@@ -151,24 +150,26 @@ button{
 
 .paragraph-and-number{
     display: flex;
-    justify-content: space-around;
-    margin-right:60px;
+    justify-content: space-between;
+    margin-top: 12px;
+    
 }
 
 .paragraph-and-number .tex{
-    margin-left: 20px;
     font-size:20px;
     font-family: arial;
-    margin-top: 15px;
 
 }
 
 .paragraph-and-number .num{
-    margin-left: 20px;
-    font-size:40px;
+    font-size:30px;
 
 }
 .paragraph-and-number hr{
     width: 20px;
    
+}
+
+.three{
+    margin-right: 50px;
 }
