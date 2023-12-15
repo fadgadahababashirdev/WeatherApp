@@ -183,17 +183,4 @@ button{
     .header h1{
         text-align: center;
     }
-
-.icon-and-searc-button {
-    margin-left: 40px;
-    display: flex;
-    justify-content: center;
-}
-
-.icon-and-searc-button input[type='text']{
-    width: 190px;
-    
-   
-
-}
 }

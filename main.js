@@ -9,6 +9,8 @@ const cloud = document.getElementById('cloud')
 const sectionTwo = document.getElementsByClassName('section-two')[0]
 const cityNa = document.getElementById('cit');
 
+const ci=input
+
 
 
 
@@ -17,7 +19,9 @@ const myFetchApi = async (data)=>{
         const myApi = `https://api.weatherapi.com/v1/current.json?key=c266a5bc38894bea8d994326231412&q=${data}`
         const fetchTheApi = await fetch(myApi)
         if(!fetchTheApi.ok){
+            
             throw new Error(`city ${data} not found`);
+            
         }
         const turnToJson = await fetchTheApi.json()
         DisplayData(turnToJson)
@@ -37,6 +41,7 @@ searchButton.addEventListener('click' , ()=>{
         sectionTwo.style.visibility = 'visible'
       
     }
+   
    
 })
 
